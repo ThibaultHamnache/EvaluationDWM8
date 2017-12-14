@@ -24,3 +24,7 @@ Route::post('/serie/update', 'SerieController@updateOneAction');
 
 Route::post('/movie/insert', 'MovieController@insertOne');
 Route::post('/movie/update', 'MovieController@updateOneAction');
+
+
+Route::get('/serie/delete/{id}', 'SerieController@deleteOne');
+Route::get('/serie/update/{id}', 'MovieController@updateOne');

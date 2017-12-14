@@ -5,7 +5,7 @@
   <h1>Our Series</h1>
 
 
-  <form action="/create_serie" method="GET" class="btn pull-top-right">
+  <form action="/create_serie" method="GET" class="btn pull-right">
     <button type="submit" class="btn btn-outline-info delete-btn">
       Add a new serie
     </button>

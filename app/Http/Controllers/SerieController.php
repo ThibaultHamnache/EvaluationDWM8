@@ -32,10 +32,10 @@ class SerieController extends Controller
 
   public function deleteOne(Request $request, $id)
   {
-    $serie = Player::find($id);
-    $serie->teams()->detach();
+    $serie = Serie::find($id);
+    $serie->categories()->detach();
     $serie->delete();
-    return redirect('/');
+    return redirect('/serie');
   }
 
   public function updateOne(Request $request, $id)
