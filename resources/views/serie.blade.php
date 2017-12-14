@@ -54,7 +54,7 @@
             </form>
           </td>
           <td>
-            <form action="/serie/update/{{$serie->id}}" method="GET">
+            <form action="/serie/update_serie/{{$serie->id}}" method="GET">
               {{ csrf_field() }}
               <button type="submit" class="btn btn-outline-info delete-btn">
                 <i class="fa fa-pencil" aria-hidden="true"></i>

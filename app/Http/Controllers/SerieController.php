@@ -40,34 +40,30 @@ class SerieController extends Controller
 
   public function updateOne(Request $request, $id)
   {
-    $player = Player::find($id);
-    $rolesAll = Role::all();
-    //pour gerer le formulaire
-    $roles = [];//array vide
-    foreach ($rolesAll as $value) {
-      $roles[$value->id] = $value->role;// on met les gender dans un array
-    }
+    $serie = Serie::find($id);
 
-    $teamsAll = Team::all();
+    $categoriesAll = Category::all();
     //pour gerer le formulaire
-    $teams = []; //array vide
-    foreach ($teamsAll as $value) {
-      $teams[$value->id] = $value->team; // on met les couleur dans un array
+    $categories = []; //array vide
+    foreach ($categoriesAll as $value) {
+      $categories[$value->id] = $value->category; // on met les couleur dans un array
     }
-    return view('update', ['roles' => $roles, 'teams' => $teams, 'player' => $player]);
+    return view('update_serie', ['categories' => $categories, 'serie' => $serie]);
   }
   public function updateOneAction(Request $request)
   {
 
-    $player = Player::find($request->id);
-    $player->firstname = $request->firstname;
-    $player->lastname = $request->lastname;
-    $player->number = $request->number;
-    $player->age = $request->age;
-    $player->role_id = $request->role;
-    $player->teams()->detach();
-    $player->teams()->attach($request->teams);
-    $player->save();
-    return redirect('/');
+    $serie = Serie::find($request->id);
+    $serie->name = $request->name;
+    $serie->nb_seasons = $request->nb_seasons;
+    $serie->episodes = $request->episodes;
+    $serie->release_date = $request->release_date;
+    $serie->price = $request->price;
+    $serie->stock = $request->stock;
+
+    $serie->categories()->detach();
+    $serie->categories()->attach($request->categories);
+    $serie->save();
+    return redirect('/serie');
   }
 }
