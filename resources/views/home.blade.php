@@ -2,9 +2,9 @@
 
 @section('title', 'Home')
 @section('main')
-  <div class="container">
+  <div class="container-fluid img-responsive home">
 
-  <h1>Home</h1>
+    <h1>Home</h1>
 
 </div>
 

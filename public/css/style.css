@@ -8,8 +8,8 @@ ul
   background-color: #52C6CC;
   height: 7vh;
   align-items: center;
+  margin-bottom: 0px;
 }
-
 li
 {
   display: flex;
@@ -18,14 +18,12 @@ li
   text-transform: uppercase;
   padding-right: 2%;
 }
-
 a
 {
   text-decoration: none;
   font-weight: 200;
   color: #fff;
 }
-
 li a:hover
 {
   color: grey;
@@ -34,15 +32,18 @@ li a:hover
 /**************************************/
 /*************** MAIN *****************/
 /**************************************/
-main
+
+/**************************************/
+/*************** HOME *****************/
+/**************************************/
+.home
 {
-  padding-top: 5%;
 
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-
+  height: 100vh;
+  background: url(../img/wallpaper.jpg) center no-repeat;
+  background-size: cover;
 }
+
 /**************************************/
 /******** FORM CREATE / UPDATE ********/
 /**************************************/

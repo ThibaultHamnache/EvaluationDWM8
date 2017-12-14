@@ -3,7 +3,9 @@
 @section('title', 'UpdateSerie')
 @section('main')
   <div class="container">
+    <br>
     <h1>Update a serie</h1>
+    <br>
     {!! Form::open(['url' => '/serie/update_serie']) !!}
     {{{ Form::hidden('id', $serie->id) }}}
       <div class="form-group">
@@ -19,7 +21,7 @@
         {{{ Form::number('episodes', $serie->episodes) }}}
       </div>
       <div class="form-group">
-        {{{ Form::label('Gategory', 'Category', ['class' => 'align-top']) }}}
+        {{{ Form::label('Category', 'Category', ['class' => 'align-top']) }}}
         {{{ Form::select('categories[]', $categories, $serie->categories, ['multiple' => true]) }}}
       </div>
       <div class="form-group">

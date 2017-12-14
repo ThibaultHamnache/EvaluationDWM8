@@ -3,7 +3,9 @@
 @section('title', 'CreateSerie')
 @section('main')
   <div class="container">
+    <br>
     <h1>Add a new Serie</h1>
+    <br>
     {!! Form::open(['url' => '/serie/insert']) !!}
       <div class="form-group">
         {{{ Form::label('Name') }}}
@@ -18,7 +20,7 @@
         {{{ Form::number('episodes') }}}
       </div>
       <div class="form-group">
-        {{{ Form::label('Gategory', 'Category', ['class' => 'align-top']) }}}
+        {{{ Form::label('Category', 'Category', ['class' => 'align-top']) }}}
         {{{ Form::select('categories[]', $categories, 0, ['multiple' => true]) }}}
       </div>
       <div class="form-group">
