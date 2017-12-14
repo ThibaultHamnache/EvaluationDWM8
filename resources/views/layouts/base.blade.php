@@ -5,7 +5,10 @@
     <title>@yield('title')</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Saira+Semi+Condensed:600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cairo:700" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="/img/icon.png">
   </head>
   <body>
     <header>

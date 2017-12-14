@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Serie as Serie;
 use App\Category as Category;
+use App\State as State;
 
 
 class SerieController extends Controller
@@ -22,6 +23,7 @@ class SerieController extends Controller
     $serie->nb_seasons = $request->nb_seasons;
     $serie->episodes = $request->episodes;
     $serie->release_date = $request->release_date;
+    $serie->state_id = $request->state;
     $serie->price = $request->price;
     $serie->stock = $request->stock;
     $serie->category_id = $request->category;
@@ -42,13 +44,20 @@ class SerieController extends Controller
   {
     $serie = Serie::find($id);
 
+    $statesAll = State::all();
+    //pour gerer le formulaire
+    $states = [];//array vide
+    foreach ($statesAll as $value) {
+      $states[$value->id] = $value->state;// on met les gender dans un array
+    }
+
     $categoriesAll = Category::all();
     //pour gerer le formulaire
     $categories = []; //array vide
     foreach ($categoriesAll as $value) {
       $categories[$value->id] = $value->category; // on met les couleur dans un array
     }
-    return view('update_serie', ['categories' => $categories, 'serie' => $serie]);
+    return view('update_serie', ['states' => $states,'categories' => $categories, 'serie' => $serie]);
   }
   public function updateOneAction(Request $request)
   {
@@ -60,6 +69,7 @@ class SerieController extends Controller
     $serie->release_date = $request->release_date;
     $serie->price = $request->price;
     $serie->stock = $request->stock;
+    $serie->state_id = $request->state;
 
     $serie->categories()->detach();
     $serie->categories()->attach($request->categories);

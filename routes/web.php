@@ -20,11 +20,11 @@ Route::get('/create_serie', 'CreateSerieController@index');
 
 
 Route::post('/serie/insert', 'SerieController@insertOne');
-Route::post('/serie/update', 'SerieController@updateOneAction');
+Route::post('/serie/update_serie', 'SerieController@updateOneAction');
 
 Route::post('/movie/insert', 'MovieController@insertOne');
 Route::post('/movie/update', 'MovieController@updateOneAction');
 
 
 Route::get('/serie/delete/{id}', 'SerieController@deleteOne');
-Route::get('/serie/update/{id}', 'MovieController@updateOne');
+Route::get('/serie/update_serie/{id}', 'SerieController@updateOne');

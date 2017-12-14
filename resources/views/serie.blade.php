@@ -2,8 +2,11 @@
 
 @section('title', 'Serie')
 @section('main')
-  <h1>Our Series</h1>
 
+<div class="container">
+
+
+  <h1>Our Series</h1>
 
   <form action="/create_serie" method="GET" class="btn pull-right">
     <button type="submit" class="btn btn-outline-info delete-btn">
@@ -18,6 +21,7 @@
         <th scope="col">Episodes</th>
         <th scope="col">Categories</th>
         <th scope="col">Release Date</th>
+        <th scope="col">State</th>
         <th scope="col">Price</th>
         <th scope="col">Stocks</th>
         <th scope="col">Delete</th>
@@ -42,7 +46,12 @@
             <td>Inconnu</td>
           @endif
           <td>{{ $serie->release_date }}</td>
-          <td>{{ $serie->price }}</td>
+          @if ($serie->state)
+            <td>{{ $serie->state->state }}</td>
+          @else
+            <td>Inconnu</td>
+          @endif
+          <td>{{ $serie->price }}$</td>
           <td>{{ $serie->stock }}</td>
 
           <td>
@@ -67,4 +76,5 @@
     </tbody>
   </table>
 
+</div>
 @endsection
