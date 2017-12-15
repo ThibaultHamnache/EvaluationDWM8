@@ -30,8 +30,7 @@
 
   ### SEARCHBAR :
   - I also found a SearchBar code on W3S but I had some trouble to adjust this one. And it's one of my remaining problem. I had
-    to create 2 function for the search one for each page that i used on a script.js. In the script my variables are table, td
-    etc because I used a table in my views.
+    to create 2 function for the search one for each page that i used on a script.js. In the script my variables are table, td etc because I used a table in my views.
 
   ### BOOTSTRAP :
    I tried to use only BOOTSTRAP and no flex-box to get a responsive app.
