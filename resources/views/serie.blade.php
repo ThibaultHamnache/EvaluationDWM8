@@ -6,12 +6,13 @@
     <br>
     <h1>Our Series</h1>
     <br>
+    <input type="text" id="myInput" onkeyup="searchFunction()" placeholder="Search for series">
     <form action="/create_serie" method="GET" class="btn pull-right">
       <button type="submit" class="btn btn-outline-info delete-btn">
         <i class="fa fa-plus" aria-hidden="true"></i> Add a new serie
       </button>
     </form>
-    <table class="table table-responsive">
+    <table id="myTable" class="table table-responsive table-striped">
       <thead>
         <tr>
           <th scope="col">Name</th>
@@ -29,28 +30,28 @@
       <tbody>
         @foreach ($series->sortBy('name') as $serie)
           <tr>
-            <td>{{ $serie->name }}</td>
-            <td>{{ $serie->nb_seasons }}</td>
-            <td>{{ $serie->episodes }}</td>
+            <td class="align-middle">{{ $serie->name }}</td>
+            <td class="align-middle">{{ $serie->nb_seasons }}</td>
+            <td class="align-middle">{{ $serie->episodes }}</td>
             @if ($serie->categories)
-              <td>
+              <td class="align-middle">
                 @foreach ($serie->categories as $category)
                   {{{ $category->category }}}
                 @endforeach
               </td>
             @else
-              <td>Inconnu</td>
+              <td class="align-middle">Inconnu</td>
             @endif
-            <td>{{ $serie->release_date }}</td>
+            <td class="align-middle">{{ $serie->release_date }}</td>
             @if ($serie->state)
-              <td>{{ $serie->state->state }}</td>
+              <td class="align-middle">{{ $serie->state->state }}</td>
             @else
-              <td>Inconnu</td>
+              <td class="align-middle">Inconnu</td>
             @endif
-            <td>{{ $serie->price }}$</td>
-            <td>{{ $serie->stock }}</td>
+            <td class="align-middle">{{ $serie->price }}$</td>
+            <td class="align-middle">{{ $serie->stock }}</td>
 
-            <td>
+            <td class="align-middle">
               <form action="/serie/delete/{{$serie->id}}" method="GET">
                 {{ csrf_field() }}
                 <button type="submit" class="btn btn-outline-danger delete-btn">
@@ -58,7 +59,7 @@
                 </button>
               </form>
             </td>
-            <td>
+            <td class="align-middle">
               <form action="/serie/update_serie/{{$serie->id}}" method="GET">
                 {{ csrf_field() }}
                 <button type="submit" class="btn btn-outline-info delete-btn">
@@ -70,5 +71,6 @@
         @endforeach
       </tbody>
     </table>
+    {!! $series->render() !!}
   </div>
 @endsection

@@ -21,7 +21,7 @@
       </div>
       <div class="form-group">
         {{{ Form::label('Category', 'Category', ['class' => 'align-top']) }}}
-        {{{ Form::select('categories[]', $categories, 0, ['multiple' => true]) }}}
+        {{{ Form::select('categories[]', $categories, 0, ['class' => 'select', 'multiple' => true]) }}}
       </div>
       <div class="form-group">
         {{{ Form::label('Release Date') }}}

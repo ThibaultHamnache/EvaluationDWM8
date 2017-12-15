@@ -22,7 +22,7 @@
       </div>
       <div class="form-group">
         {{{ Form::label('Category', 'Category', ['class' => 'align-top']) }}}
-        {{{ Form::select('categories[]', $categories, $serie->categories, ['multiple' => true]) }}}
+        {{{ Form::select('categories[]', $categories, $serie->categories, ['class' => 'select', 'multiple' => true]) }}}
       </div>
       <div class="form-group">
         {{{ Form::label('Release Date') }}}

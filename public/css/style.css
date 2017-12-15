@@ -40,16 +40,32 @@ li a:hover
 {
 
   height: 100vh;
-  background: url(../img/wallpaper.jpg) center no-repeat;
+  background-image: url(../img/wallpaper.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
 }
-
+p
+{
+  color: #000;
+}
+.home_text{
+  height: 100%;
+}
 /**************************************/
 /******** FORM CREATE / UPDATE ********/
 /**************************************/
 label
 {
   width: 100px;
+}
+.select
+{
+  border: 1px solid #52C6CC;
+  border-radius: 5%;
+  min-height: 20vh;
+  width: 20vh;
 }
 
 /**************************************/
@@ -71,6 +87,7 @@ td:nth-child(1)
 }
 td
 {
+  vertical-align: center;
   min-width: 50px;
   text-align: center;
 }
