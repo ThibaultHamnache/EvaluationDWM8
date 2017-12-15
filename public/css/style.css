@@ -39,7 +39,7 @@ li a:hover
 .home
 {
   height: 100vh;
-  background-image: url(../img/wallpaper.jpg);
+  background-image: url(../img/wallpaper.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -50,17 +50,31 @@ p
 }
 .home_text{
   height: 100%;
-
+  color: #52C6CC;
 }
 h1
 {
-  margin-top: 15%;
+  margin-top: 10%;
   text-align: center;
   font-size: 100px;
 }
+@media screen and (min-width:200px){
+  h1
+  {
+    font-size: 50px;
+  }
+}
+
+
+
 p
 {
+  color: grey;
   text-align: center;
+}
+.ps
+{
+
 }
 /**************************************/
 /******** FORM CREATE / UPDATE ********/
@@ -72,11 +86,14 @@ label
 .select
 {
   border: 1px solid #52C6CC;
-  border-radius: 5%;
+  border-radius: 4%;
   min-height: 20vh;
   width: 20vh;
 }
-
+.select_state
+{
+  background-color:
+}
 /**************************************/
 /******** TABLE SERIE / MOVIE *********/
 /**************************************/

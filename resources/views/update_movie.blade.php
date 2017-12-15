@@ -4,13 +4,13 @@
 @section('main')
   <div class="container">
     <br>
-    <h1>Update a Movie</h1>
+    <h2>Update a Movie</h2>
     <br>
     {!! Form::open(['url' => '/movie/update_movie']) !!}
     {{{ Form::hidden('id', $movie->id) }}}
       <div class="form-group">
         {{{ Form::label('Name') }}}
-        {{{ Form::text('name', $movie->name) }}}
+        {{{ Form::text('name', $movie->name, array('required' => 'required')) }}}
       </div>
       <div class="form-group">
         {{{ Form::label('Category', 'Category', ['class' => 'align-top']) }}}
@@ -22,7 +22,7 @@
       </div>
       <div class="form-group">
         {{{ Form::label('Price') }}}
-        {{{ Form::number('price', $movie->price) }}}
+        {{{ Form::number('price', $movie->price, array('required' => 'required')) }}}
       </div>
       <div class="form-group">
         {{{ Form::label('Stock') }}}

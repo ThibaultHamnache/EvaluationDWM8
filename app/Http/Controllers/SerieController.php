@@ -12,7 +12,7 @@ class SerieController extends Controller
 {
   public function index()
   {
-    $series = Serie::with('categories')->paginate(5);
+    $series = Serie::orderBy('name', 'asc')->with('categories')->paginate(5);
     return view('serie', ['series' => $series]);
   }
 

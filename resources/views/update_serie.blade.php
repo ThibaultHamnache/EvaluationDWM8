@@ -4,13 +4,13 @@
 @section('main')
   <div class="container">
     <br>
-    <h1>Update a serie</h1>
+    <h2>Update a serie</h2>
     <br>
     {!! Form::open(['url' => '/serie/update_serie']) !!}
     {{{ Form::hidden('id', $serie->id) }}}
       <div class="form-group">
         {{{ Form::label('Name') }}}
-        {{{ Form::text('name', $serie->name) }}}
+        {{{ Form::text('name', $serie->name, array('required' => 'required')) }}}
       </div>
       <div class="form-group">
         {{{ Form::label('Seasons') }}}
@@ -34,7 +34,7 @@
       </div>
       <div class="form-group">
         {{{ Form::label('Price') }}}
-        {{{ Form::number('price', $serie->price) }}}
+        {{{ Form::number('price', $serie->price, array('required' => 'required')) }}}
       </div>
       <div class="form-group">
         {{{ Form::label('Stock') }}}

@@ -14,8 +14,8 @@
         its still in production, you will be able to delete one or
         update one if you have complementary inforamtion.
         In the page Movies you can almost do the same like create,
-        update, delete, but without seasons or episode cause you know its a movie.</p><br>
-        <p>PS: PLS DO NOT INSERT BAD MOVIES LIKE BLADE :)</p>
+        update, delete, but without seasons or episode cause you know its a movie.</p>
+        <p class="ps fixed-bottom">PS: PLS DO NOT INSERT BAD MOVIES LIKE BLADE :)</p>
     </div>
 
 </div>

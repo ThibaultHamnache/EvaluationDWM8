@@ -4,12 +4,12 @@
 @section('main')
   <div class="container">
     <br>
-    <h1>Add a new Serie</h1>
+    <h2>Add a new Serie</h2>
     <br>
     {!! Form::open(['url' => '/serie/insert']) !!}
       <div class="form-group">
         {{{ Form::label('Name') }}}
-        {{{ Form::text('name') }}}
+        {{{ Form::text('name', '', array('required' => 'required')) }}}
       </div>
       <div class="form-group">
         {{{ Form::label('Seasons') }}}
@@ -29,11 +29,11 @@
       </div>
       <div class="form-group">
         {{{ Form::label('State') }}}
-        {{{ Form::select('state', $states, null) }}}
+        {{{ Form::select('state', $states, null, ['class' => 'select_state']) }}}
       </div>
       <div class="form-group">
         {{{ Form::label('Price') }}}
-        {{{ Form::number('price') }}}
+        {{{ Form::number('price', '', array('required' => 'required')) }}}
       </div>
       <div class="form-group">
         {{{ Form::label('Stock') }}}

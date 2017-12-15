@@ -2,9 +2,9 @@
 
 @section('title', 'Serie')
 @section('main')
-  <div class="container">
+  <div id="serie" class="container">
     <br>
-    <h1>Our Series</h1>
+    <h2>Our Series</h2>
     <br>
     <button class="btn btn-info pull-left" type="button" data-toggle="collapse" data-target="#collapseSearch" aria-expanded="false" aria-controls="collapseSearch">
       <i class="fa fa-search fa-lg" aria-hidden="true"></i> Search
@@ -18,10 +18,10 @@
 
     <div class="collapse" id="collapseSearch">
       <div class="card card-body">
-        <input type="text" id="myInput" onkeyup="searchFunction()" placeholder="Search for series">
+        <input type="text" id="myInput1" onkeyup="searchFunction1()" placeholder="Search for series">
       </div>
     </div>
-    <table id="myTable" class="table table-responsive table-striped">
+    <table id="myTable1" class="table table-responsive">
       <thead>
         <tr>
           <th scope="col">Name</th>
@@ -37,7 +37,7 @@
         </tr>
       </thead>
       <tbody>
-        @foreach ($series->sortBy('name') as $serie)
+        @foreach ($series as $serie)
           <tr>
             <td class="align-middle">{{ $serie->name }}</td>
             <td class="align-middle">{{ $serie->nb_seasons }}</td>

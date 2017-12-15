@@ -4,12 +4,12 @@
 @section('main')
   <div class="container">
     <br>
-    <h1>Add a new Movie</h1>
+    <h2>Add a new Movie</h2>
     <br>
     {!! Form::open(['url' => '/movie/insert']) !!}
       <div class="form-group">
         {{{ Form::label('Name') }}}
-        {{{ Form::text('name') }}}
+        {{{ Form::text('name', '', array('required' => 'required')) }}}
       </div>
       <div class="form-group">
         {{{ Form::label('Category', 'Category', ['class' => 'align-top']) }}}
@@ -21,7 +21,7 @@
       </div>
       <div class="form-group">
         {{{ Form::label('Price') }}}
-        {{{ Form::number('price') }}}
+        {{{ Form::number('price', '', array('required' => 'required')) }}}
       </div>
       <div class="form-group">
         {{{ Form::label('Stock') }}}
