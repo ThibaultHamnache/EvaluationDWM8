@@ -1,12 +1,12 @@
 function searchFunction() {
   var input, filter, table, tr, td, i;
   input = document.getElementById("myInput");
-  filter = input.value.toUpperCase();
+  filter = input.value.toUpperCase(); //do not take the caps
   table = document.getElementById("myTable");
   tr = table.getElementsByTagName("tr");
 
   for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[0];
+    td = tr[i].getElementsByTagName("td")[0]; //designate the column we are looking in
     if (td) {
       if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
         tr[i].style.display = "";

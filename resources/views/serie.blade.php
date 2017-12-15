@@ -6,12 +6,21 @@
     <br>
     <h1>Our Series</h1>
     <br>
-    <input type="text" id="myInput" onkeyup="searchFunction()" placeholder="Search for series">
-    <form action="/create_serie" method="GET" class="btn pull-right">
-      <button type="submit" class="btn btn-outline-info delete-btn">
-        <i class="fa fa-plus" aria-hidden="true"></i> Add a new serie
-      </button>
-    </form>
+    <button class="btn btn-info pull-left" type="button" data-toggle="collapse" data-target="#collapseSearch" aria-expanded="false" aria-controls="collapseSearch">
+      <i class="fa fa-search fa-lg" aria-hidden="true"></i> Search
+    </button>
+
+      <form action="/create_serie" method="GET" class="btn pull-right">
+        <button type="submit" class="btn btn-outline-info delete-btn">
+          <i class="fa fa-plus" aria-hidden="true"></i> Add a new serie
+        </button>
+      </form>
+
+    <div class="collapse" id="collapseSearch">
+      <div class="card card-body">
+        <input type="text" id="myInput" onkeyup="searchFunction()" placeholder="Search for series">
+      </div>
+    </div>
     <table id="myTable" class="table table-responsive table-striped">
       <thead>
         <tr>
