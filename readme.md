@@ -34,10 +34,10 @@
     etc because I used a table in my views.
 
   ### BOOTSTRAP :
-    I tried to use only BOOTSTRAP and no flex-box to get a responsive app.
+   I tried to use only BOOTSTRAP and no flex-box to get a responsive app.
 
   ### UX DESIGN :
-    I tried to stay simple in my css and the colors to make it easy to look.
+   I tried to stay simple in my css and the colors to make it easy to look.
 
 ## Difficulties and remaining problem(s)
   Difficulties :
