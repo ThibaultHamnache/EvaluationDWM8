@@ -24,7 +24,7 @@
         {{{ Form::select('categories[]', $categories, 0, ['class' => 'select', 'multiple' => true]) }}}
       </div>
       <div class="form-group">
-        {{{ Form::label('Release Date') }}}
+        {{{ Form::label('Release Year') }}}
         {{{ Form::number('release_date') }}}
       </div>
       <div class="form-group">
@@ -32,7 +32,7 @@
         {{{ Form::select('state', $states, null, ['class' => 'select_state']) }}}
       </div>
       <div class="form-group">
-        {{{ Form::label('Price') }}}
+        {{{ Form::label('Price ($)') }}}
         {{{ Form::number('price', '', array('required' => 'required')) }}}
       </div>
       <div class="form-group">

@@ -1,58 +1,50 @@
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+## Project
+  I choose to create a laravel app about series and movies (a mediatheque).
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+## Fonctionalities and ressources
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+  - I used a template for my pages by using the @yield, @include, @extends, @section, @endsection.
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications.
+  ### DATABASE :
+   - I created 6 table (series / movies / categories / states / category_movie / category_serie ). The series table contain
+     id, name, nb_seasons, episodes, release_date, state_id, price, stock. The movies table contain id, name, release_date,
+     state_id, price, stock. The categories table contain id, category. The states table contain id, state. category_movie and
+     category_serie are relational table between categories and respectively movies and series.
 
-## Learning Laravel
+  ### CRUD :
+   - Create : I had to create 2 forms one for series and one for movies because they don't have the same table and the same  
+     informations, the table series is more completed than movies. I use the function insertOne.
+   - Read : I created 2 view : serie.blade.php and movie.blade.php. I used an orderBy name ASC for the read.
+   - Update : I create 2 view : update_movie.blade.php and update_serie.blade.php. I used the id to update. I created 2 Routes
+     by pages. I use the function updateOne and updateOneAction.
+   - Delete : I created 1 Routes by pages. I use the function deleteOne.
+   - I first create the READ then the CREATE
+   - I used Laravel Collective and the language blade for my forms in create and update.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of any modern web application framework, making it a breeze to get started learning the framework.
+  ### PAGINATION :
+  - I use a pagination system with 5 results by pages (define in SerieController and MovieController) that i found on W3S
+    website and that I adjusted to my site.
 
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 1100 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
+  ### SEARCHBAR :
+  - I also found a SearchBar code on W3S but I had some trouble to adjust this one. And it's one of my remaining problem. I had
+    to create 2 function for the search one for each page that i used on a script.js. In the script my variables are table, td
+    etc because I used a table in my views.
 
-## Laravel Sponsors
+  ### BOOTSTRAP :
+   I tried to use only BOOTSTRAP and no flex-box to get a responsive app.
 
-We would like to extend our thanks to the following sponsors for helping fund on-going Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](http://patreon.com/taylorotwell):
+  ### UX DESIGN :
+   I tried to stay simple in my css and the colors to make it easy to look.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Pulse Storm](http://www.pulsestorm.net/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
+## Difficulties and remaining problem(s)
+  Difficulties :
+    - It was difficult to have 2 different CRUD to do because when I changed something in one form I had to changed it in 3 other views
+  Remaining problem :
+    - SearchBar is effective page by page, I tried to figure this out but no way to find where the problem come from. It still                   
+      work in one page of the table.
 
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+## What I'm proud of
+  My pages Serie and Movie with the table order by name ASC and the home page because I'm a huge fan of GOT

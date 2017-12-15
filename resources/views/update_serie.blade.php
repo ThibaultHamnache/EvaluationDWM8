@@ -25,7 +25,7 @@
         {{{ Form::select('categories[]', $categories, $serie->categories, ['class' => 'select', 'multiple' => true]) }}}
       </div>
       <div class="form-group">
-        {{{ Form::label('Release Date') }}}
+        {{{ Form::label('Release Year') }}}
         {{{ Form::number('release_date', $serie->release_date) }}}
       </div>
       <div class="form-group">
@@ -33,7 +33,7 @@
         {{{ Form::select('state', $states, $serie->state->id) }}}
       </div>
       <div class="form-group">
-        {{{ Form::label('Price') }}}
+        {{{ Form::label('Price ($)') }}}
         {{{ Form::number('price', $serie->price, array('required' => 'required')) }}}
       </div>
       <div class="form-group">
